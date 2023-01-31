@@ -9,8 +9,9 @@
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    //  "baseUrl": ".",
     // allow synth. imports * as --> import md from 'path'
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
 
   },
   "ts-node": {
