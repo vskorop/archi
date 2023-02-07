@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 
 
-import cls from  './appLink.module.scss'
+import cls from './AppLink.module.scss'
 import {Link, LinkProps} from "react-router-dom";
 
 
