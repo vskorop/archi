@@ -18,6 +18,7 @@ export const SideBar = ({className}: SideBarProps) => {
     const onToggle = () => {
         setCollapses(prev => !prev)
     }
+    const iconsClasses =  classNames(cls.sideBarIcon, {[cls.closedSideBar]: collapsed} )
     return (
         <div className={classNames(cls.sideBar, {[cls.collapsed]: collapsed}, [className])}>
             <div className={cls.sidebarIcons}>
@@ -29,16 +30,14 @@ export const SideBar = ({className}: SideBarProps) => {
                     <SideBarIcon
                         fill="white"
                         width={32}
-                        className={classNames('', {[cls.closedSideBar]: collapsed, [cls.openSidebar]: !collapsed} )}
+                        className={iconsClasses}
                         height={32}/> :
                     <SideBarIcon
                         fill="black"
-                        className={classNames('', {[cls.closedSideBar]: collapsed, [cls.openSidebar]: !collapsed} )}
+                        className={iconsClasses}
                         width={32}
                         height={32}
                     />}
-
-
             </Button>
                 </div>
             <div className={cls.switchers}>
