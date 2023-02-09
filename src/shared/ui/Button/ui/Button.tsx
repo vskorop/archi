@@ -4,6 +4,7 @@ import {ButtonHTMLAttributes, FC} from "react";
 
 export enum ThemeButton {
     themeSwitcherButton = 'themeSwitcherButton',
+    sideBarButton = 'sideBarButton',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -16,13 +17,12 @@ export const Button: FC<ButtonProps> = (props) => {
         className,
         children,
         theme,
-        ...otherProps
+        ...other
     } = props;
-
     return (
         <button
             className={classNames(cls.button, {[cls[theme]]: true}, [className])}
-            {...otherProps}
+            {...other}
         >
             {children}
         </button>

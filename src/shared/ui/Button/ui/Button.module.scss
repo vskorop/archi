@@ -1,5 +1,7 @@
 .button {
   cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
 .themeSwitcherButton {
@@ -13,4 +15,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.sideBarButton {
+  background: var(--third-color);
 }
