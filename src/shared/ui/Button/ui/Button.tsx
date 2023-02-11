@@ -1,11 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
+import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
-import {ButtonHTMLAttributes, FC} from "react";
 
 export enum ThemeButton {
     themeSwitcherButton = 'themeSwitcherButton',
     sideBarButton = 'sideBarButton',
-    languageSwitcher = "languageSwitcher"
+    languageSwitcher = 'languageSwitcher'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -22,11 +22,11 @@ export const Button: FC<ButtonProps> = (props) => {
     } = props;
     return (
         <button
-            className={classNames(cls.button, {[cls[theme]]: true}, [className])}
+            type="button"
+            className={classNames(cls.button, { [cls[theme]]: true }, [className])}
             {...other}
         >
             {children}
         </button>
     );
 };
-
