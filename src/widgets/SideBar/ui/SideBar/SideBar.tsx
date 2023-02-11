@@ -12,6 +12,7 @@ import cls from './SideBar.module.scss';
 interface SideBarProps {
     className?: string
 }
+
 export function SideBar({ className }: SideBarProps) {
     const [collapsed, setCollapses] = React.useState<boolean>(true);
     const { theme } = useTheme();
@@ -19,7 +20,15 @@ export function SideBar({ className }: SideBarProps) {
     const onToggle = () => {
         setCollapses((prev) => !prev);
     };
-    const iconsClasses = classNames(cls.icon, { [cls.closedSideBar]: collapsed });
+
+    const iconsClasses = classNames(
+        cls.icon,
+        {
+            [cls.closedSideBar]: collapsed,
+            [cls.openedIcon]: !collapsed,
+        },
+    );
+
     return (
         <div className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}>
             <div className={classNames(cls.sidebarIcons, { [cls.openSideBar]: !collapsed })}>
@@ -28,22 +37,8 @@ export function SideBar({ className }: SideBarProps) {
                     onClick={onToggle}
                 >
                     {theme === Theme.DEFAULT
-                        ? (
-                            <SideBarIcon
-                                fill="white"
-                                width={48}
-                                className={iconsClasses}
-                                height={48}
-                            />
-                        )
-                        : (
-                            <SideBarIcon
-                                fill="black"
-                                className={iconsClasses}
-                                width={48}
-                                height={48}
-                            />
-                        )}
+                        ? (<SideBarIcon fill="white" width={48} className={iconsClasses} height={48} />)
+                        : (<SideBarIcon fill="black" className={iconsClasses} width={48} height={48} />)}
                 </Button>
             </div>
             <div className={classNames(cls.switchers, { [cls.collapsedIcons]: collapsed })}>

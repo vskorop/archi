@@ -20,7 +20,7 @@ export function LangSwitcher({ className }: LangSwitcherProps) {
     return (
         <Button
             theme={ThemeButton.languageSwitcher}
-            className={classNames(cls.themeSwitcher, {}, [className])}
+            className={classNames(cls.langSwitcher, {}, [className])}
             onClick={languageSwitcher}
         >
             {theme === Theme.DEFAULT

@@ -1,49 +1,57 @@
 .sideBar {
-  height: calc(100vh - var(--navbar-heigth));
-  background: var(--inverted-bg-color);
-  width: var(--side-bar-width);
-  transition: width 0.3s;
-  position: relative;
+    height: calc(100vh - var(--navbar-heigth));
+    background: var(--inverted-bg-color);
+    width: var(--side-bar-width);
+    transition: all 0.4s;
+    position: relative;
+    padding-top: 5px;
+    border-bottom-right-radius: 50px;
 }
+
 .collapsed {
-  width: var(--side-bar-width-collapsed)
+    width: var(--side-bar-width-collapsed);
+    border-bottom-right-radius: 0;
 }
 
 .switchers {
-  position: absolute;
-  bottom: 29px;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-
+    position: absolute;
+    bottom: 29px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .sidebarIcons {
-  display: flex;
-  justify-content: center;
-}
-
-.icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-}
-.collapsedIcons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 200px;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.5s;
 }
 
 .openSideBar {
-  rotation: 180deg;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10px;
-
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
 }
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.collapsedIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: space-evenly;
+}
+
+.openedIcon {
+    transform: rotate(180deg);
+}
+
 .language {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }

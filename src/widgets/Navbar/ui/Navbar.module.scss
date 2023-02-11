@@ -1,20 +1,21 @@
 .navbar {
-  width: 100%;
-  height: var(--navbar-heigth);
-  background: var(--inverted-bg-color);
-  display: flex;
-  align-items: center;
-  padding: 20px;
-
+    width: 100%;
+    height: var(--navbar-heigth);
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom-right-radius: 10px;
 }
-
 
 .links {
-  margin-left: auto;
+    margin-left: auto;
 }
+
 .mainLink {
-  margin-right: 15px;
+    margin-right: 15px;
 }
+
 .aboutLink {
-  margin-right: auto;
+    margin-right: auto;
 }
