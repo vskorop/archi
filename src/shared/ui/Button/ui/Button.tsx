@@ -5,6 +5,7 @@ import {ButtonHTMLAttributes, FC} from "react";
 export enum ThemeButton {
     themeSwitcherButton = 'themeSwitcherButton',
     sideBarButton = 'sideBarButton',
+    languageSwitcher = "languageSwitcher"
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{

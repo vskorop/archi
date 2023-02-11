@@ -4,6 +4,16 @@ import {BuildOptions} from "./types/config";
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    }
 
     const svgLoader = {
         test: /\.svg$/,
@@ -45,8 +55,9 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
         }
 
     return [
-        svgLoader,
         fileLoader,
+        svgLoader,
+        babelLoader,
         typescriptLoader,
         cssLoader
     ]
