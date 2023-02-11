@@ -30,6 +30,7 @@ export function SideBar({ className }: SideBarProps) {
     );
 
     return (
+
         <div className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}>
             <div className={classNames(cls.sidebarIcons, { [cls.openSideBar]: !collapsed })}>
                 <Button
@@ -51,5 +52,6 @@ export function SideBar({ className }: SideBarProps) {
             </div>
 
         </div>
+
     );
 }
