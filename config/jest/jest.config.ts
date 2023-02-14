@@ -2,27 +2,13 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
+import path from 'path';
 
 export default {
-    // All imported modules in your tests should be mocked automatically
-    // automock: false,
-
-    // Stop running tests after `n` failures
-    // bail: 0,
-
-    // The directory where Jest should store its cached dependency information
-    // cacheDirectory: "/private/var/folders/22/rrq4_y3533v2vd_gr0ll_q_40000gn/T/jest_dx",
-
-    // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
     testEnvironment: 'jsdom',
-    rootDir: '../../',
-
-    testMatch: [
-        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-    ],
     coveragePathIgnorePatterns: [
-        '/node_modules/',
+        '\\\\node_modules\\\\',
     ],
     moduleFileExtensions: [
         'js',
@@ -35,13 +21,19 @@ export default {
     moduleDirectories: [
         'node_modules',
     ],
-    testPathIgnorePatterns: [
-        '/node_modules/',
+    modulePaths: [
+        '<rootDir>src',
     ],
-    transformIgnorePatterns: [
-        '/node_modules/',
-        '\\.pnp\\.[^\\/]+$',
+    testMatch: [
+        '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+    rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
+    resolver: undefined,
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,

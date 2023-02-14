@@ -31,9 +31,13 @@ export function SideBar({ className }: SideBarProps) {
 
     return (
 
-        <div className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}>
-            <div className={classNames(cls.sidebarIcons, { [cls.openSideBar]: !collapsed })}>
+        <div
+            data-testid="sidebar"
+            className={classNames(cls.sideBar, { [cls.collapsed]: collapsed }, [className])}
+        >
+            <div className={classNames(cls.sidebarIcons, { [cls.openSideBarIcon]: !collapsed })}>
                 <Button
+                    data-testid="sidebar-toggle"
                     className={ThemeButton.sideBarButton}
                     onClick={onToggle}
                 >
