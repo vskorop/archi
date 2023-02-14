@@ -5,7 +5,7 @@ import cls from './Button.module.scss';
 export enum ThemeButton {
     themeSwitcherButton = 'themeSwitcherButton',
     sideBarButton = 'sideBarButton',
-    languageSwitcher = 'languageSwitcher'
+    languageSwitcher = 'languageSwitcher',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
