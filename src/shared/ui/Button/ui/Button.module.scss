@@ -12,7 +12,7 @@
     height: 50px;
     background: transparent;
     border: 2px solid var(--inverted-text-color);
-    border-radius: 36%;
+    border-radius: 35%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -20,4 +20,9 @@
 
 .sideBarButton {
     background: var(--third-color);
+}
+
+.redButton {
+    color: var(--primary-color);
+    background-color: var(--four-color);
 }

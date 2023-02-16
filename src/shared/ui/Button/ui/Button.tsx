@@ -6,9 +6,10 @@ export enum ThemeButton {
     themeSwitcherButton = 'themeSwitcherButton',
     sideBarButton = 'sideBarButton',
     languageSwitcher = 'languageSwitcher',
+    redButton = 'redButton',
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string;
     theme?: ThemeButton;
 }
