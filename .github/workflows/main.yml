@@ -9,7 +9,7 @@ jobs:
   integration:
     strategy:
       matrix:
-        os: [windows-2019]
+        os: [macos-latest]
         node: [17.x]
     # The runners that the job will run on
     runs-on: ${{ matrix.os }}
