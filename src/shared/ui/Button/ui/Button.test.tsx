@@ -8,7 +8,7 @@ describe('Button', () => {
     });
     test('button has classname', () => {
         render(<Button theme={ButtonTheme.OUTLINE}>TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('sideBarButton');
+        expect(screen.getByText('TEST')).toHaveClass('button outline size_m hasIcon');
         screen.debug();
     });
 });

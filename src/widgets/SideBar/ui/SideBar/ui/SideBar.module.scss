@@ -19,6 +19,10 @@
     border-bottom-right-radius: 0;
     margin-top: 0;
     transition: all 0.4s;
+
+    .lang {
+        margin-left: 0;
+    }
 }
 
 .switchers {
@@ -28,7 +32,6 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-
 }
 
 .sidebarIcons {
@@ -46,6 +49,7 @@
     flex-direction: row;
     justify-content: center;
     margin-right: 16px;
+    fill: var(--primary-color);
 }
 
 .collapsedIcons {
@@ -63,6 +67,7 @@
 .language {
     color: var(--primary-color);
 }
+
 .items {
     margin-top: 20px;
     margin-left: 30px;
@@ -80,19 +85,3 @@
     margin-left: 10px;
     opacity: 1;
 }
-
-.icon {
-    fill: var(--primary-color);
-}
-.collapsed {
-     width: var(--sidebar-width-collapsed);
-     .lang {
-         margin-left: 0;
-     }
-
-     .link {
-         opacity: 0;
-         transition: 0.2s opacity;
-         width: 0;
-     }
- }

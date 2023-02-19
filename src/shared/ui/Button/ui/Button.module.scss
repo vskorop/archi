@@ -3,6 +3,7 @@
     color: var(--primary-color);
     padding: 6px 15px;
 }
+
 .clear {
     padding: 0;
     border: none;
@@ -36,6 +37,7 @@
     color: var(--primary-color);
     background-color: var(--four-color);
 }
+
 .square {
     padding: 0;
 }
@@ -70,4 +72,3 @@
 .button.hasIcon {
     display: contents;
 }
-
