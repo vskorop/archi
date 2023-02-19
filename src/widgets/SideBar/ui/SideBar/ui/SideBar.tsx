@@ -60,7 +60,7 @@ export function SideBar({ className }: SideBarProps) {
                     className={cls.item}
                 >
                     <HomeIcon className={cls.icon} width={32} height={32} />
-                    <span className={cls.link}>{t('Главная')}</span>
+                    {!collapsed === true && <span className={cls.link}>{t('Главная')}</span>}
                 </AppLink>
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
@@ -68,7 +68,7 @@ export function SideBar({ className }: SideBarProps) {
                     className={cls.item}
                 >
                     <AboutIcon className={cls.icon} width={32} height={32} />
-                    <span className={cls.link}>{t('О сайте')}</span>
+                    {!collapsed === true && <span className={cls.link}>{t('О сайте')}</span>}
                 </AppLink>
             </div>
             <div className={classNames(cls.switchers, { [cls.collapsedIcons]: collapsed })}>
