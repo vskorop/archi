@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButton } from 'shared/ui/Button/';
+import { Button, ButtonTheme } from 'shared/ui/Button/';
 
 import LightTheme from 'shared/assets/icons/day-sunny-svgrepo-com.svg';
 import DarkTheme from 'shared/assets/icons/night-svgrepo-com.svg';
@@ -15,13 +15,11 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
 
     return (
         <Button
-            theme={ThemeButton.themeSwitcherButton}
+            theme={ButtonTheme.CLEAR}
             className={classNames(cls.themeSwitcher, {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === Theme.DEFAULT
-                ? <LightTheme width={32} fill="white" height={32} />
-                : <DarkTheme width={32} height={32} />}
+            <LightTheme className={cls.icon} height={32} width={32} />
         </Button>
     );
 }

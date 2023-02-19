@@ -1,21 +1,31 @@
 .button {
     cursor: pointer;
-    background: transparent;
+    color: var(--primary-color);
+    padding: 6px 15px;
+}
+.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+}
+
+.background {
+    background: var(--bg-color);
+    color: var(--primary-color);
     border: none;
 }
 
-.themeSwitcherButton,
-.languageSwitcher {
-    padding: 0;
-    margin: 0;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid var(--inverted-text-color);
-    border-radius: 35%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.backgroundInverted {
+    background: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+    border: none;
 }
 
 .sideBarButton {
@@ -26,3 +36,38 @@
     color: var(--primary-color);
     background-color: var(--four-color);
 }
+.square {
+    padding: 0;
+}
+
+.square.size_m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+}
+
+.square.size_l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+}
+
+.square.size_xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+}
+
+.size_m {
+    font: var(--font-m);
+}
+
+.size_l {
+    font: var(--font-l);
+}
+
+.size_xl {
+    font: var(--font-xl);
+}
+
+.button.hasIcon {
+    display: contents;
+}
+

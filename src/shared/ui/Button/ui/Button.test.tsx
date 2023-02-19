@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ThemeButton } from 'shared/ui/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button';
 
 describe('Button', () => {
     test('with one param', () => {
@@ -7,7 +7,7 @@ describe('Button', () => {
         expect(screen.getByText('TEST')).toBeInTheDocument();
     });
     test('button has classname', () => {
-        render(<Button theme={ThemeButton.sideBarButton}>TEST</Button>);
+        render(<Button theme={ButtonTheme.OUTLINE}>TEST</Button>);
         expect(screen.getByText('TEST')).toHaveClass('sideBarButton');
         screen.debug();
     });

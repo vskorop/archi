@@ -2,11 +2,17 @@ import React from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { ThemeSwitcher } from 'widgets/ThemsSwitcher';
-import { Button, ThemeButton } from 'shared/ui/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button';
 import SideBarIcon from 'shared/assets/icons/thin-chevron-round-right-icon.svg';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { useTranslation } from 'react-i18next';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink';
+import HomeIcon from 'shared/assets/icons/home-button-icon.svg';
+import AboutIcon from 'shared/assets/icons/instruction-manuals-book-icon.svg';
+
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import LanguageIcon from 'shared/assets/icons/language.svg';
 import cls from './SideBar.module.scss';
 
 interface SideBarProps {
@@ -38,13 +44,32 @@ export function SideBar({ className }: SideBarProps) {
             <div className={classNames(cls.sidebarIcons, { [cls.openSideBarIcon]: !collapsed })}>
                 <Button
                     data-testid="sidebar-toggle"
-                    className={ThemeButton.sideBarButton}
+                    theme={ButtonTheme.BACKGROUND_INVERTED}
                     onClick={onToggle}
+                    size={ButtonSize.M}
+                    hasIcon
                 >
-                    {theme === Theme.DEFAULT
-                        ? (<SideBarIcon fill="white" width={48} className={iconsClasses} height={48} />)
-                        : (<SideBarIcon fill="black" className={iconsClasses} width={48} height={48} />)}
+                    <SideBarIcon fill="white" className={cls.icon} width={48} height={48} />
                 </Button>
+
+            </div>
+            <div className={cls.items}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.main}
+                    className={cls.item}
+                >
+                    <HomeIcon className={cls.icon} width={32} height={32} />
+                    <span className={cls.link}>{t('Главная')}</span>
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.about}
+                    className={cls.item}
+                >
+                    <AboutIcon className={cls.icon} width={32} height={32} />
+                    <span className={cls.link}>{t('О сайте')}</span>
+                </AppLink>
             </div>
             <div className={classNames(cls.switchers, { [cls.collapsedIcons]: collapsed })}>
                 <LangSwitcher />

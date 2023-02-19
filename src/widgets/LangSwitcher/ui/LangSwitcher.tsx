@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButton } from 'shared/ui/Button/';
+import { Button, ButtonTheme } from 'shared/ui/Button/';
 
 import LanguageIcon from 'shared/assets/icons/language.svg';
 import { useTranslation } from 'react-i18next';
@@ -19,13 +19,11 @@ export function LangSwitcher({ className }: LangSwitcherProps) {
     };
     return (
         <Button
-            theme={ThemeButton.languageSwitcher}
+            theme={ButtonTheme.CLEAR}
             className={classNames(cls.langSwitcher, {}, [className])}
             onClick={languageSwitcher}
         >
-            {theme === Theme.DEFAULT
-                ? <LanguageIcon width={32} fill="white" height={32} />
-                : <LanguageIcon width={32} height={32} />}
+            <LanguageIcon className={cls.icon} width={32} height={32} />
         </Button>
     );
 }
