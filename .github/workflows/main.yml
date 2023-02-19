@@ -9,7 +9,7 @@ jobs:
   integration:
     strategy:
       matrix:
-        os: [macos-latest]
+        os: [ubuntu-2019]
         node: [17.x]
     runs-on: ${{ matrix.os }}
     steps:

@@ -35,6 +35,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'no-underscore-dangle': 'off',
         'react/no-unused-prop-types': 'off',
+        'linebreak-style': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['fill', 'data-testid', 'to'],
