@@ -1,9 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from 'app/providers/ThemeProvider';
 import { Button, ButtonTheme } from 'shared/ui/Button/';
 
 import LightTheme from 'shared/assets/icons/day-sunny-svgrepo-com.svg';
-import DarkTheme from 'shared/assets/icons/night-svgrepo-com.svg';
 import cls from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
