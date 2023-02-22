@@ -4,7 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended'],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:react-hooks/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -34,8 +34,10 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'import/prefer-default-export': 'off',
         'no-underscore-dangle': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
         'react/no-unused-prop-types': 'off',
         'linebreak-style': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['fill', 'data-testid', 'to'],
@@ -44,12 +46,14 @@ module.exports = {
             code: 120,
             ignoreComments: true,
         }],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
         __IS_DEV: true,
     },
     overrides: [{
-        files: ['**/src/**/*.test.{ts,tsx}', '**/src/**/*.svg', 'eslintrc.js'],
+        files: ['**/src/**/*.{test,stories}.{ts,tsx}', '**/src/**/*.svg', 'eslintrc.js'],
         rules: {
             'i18next/no-literal-string': 'off',
         },

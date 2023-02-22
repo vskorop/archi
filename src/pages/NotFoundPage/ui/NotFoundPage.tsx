@@ -13,7 +13,9 @@ export const NotFoundPage = ({ className }: NotFoundPageProps) => {
     return (
         <div className={classNames(cls.notFoundPage, {}, [className])}>
             {t('Страница 404')}
-            <ErrorIcon height={380} width={380} />
+            <div>
+                <ErrorIcon height={200} width={200} />
+            </div>
         </div>
     );
 };

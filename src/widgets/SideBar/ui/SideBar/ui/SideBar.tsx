@@ -12,7 +12,6 @@ import HomeIcon from 'shared/assets/icons/home-button-icon.svg';
 import AboutIcon from 'shared/assets/icons/instruction-manuals-book-icon.svg';
 
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import LanguageIcon from 'shared/assets/icons/language.svg';
 import cls from './SideBar.module.scss';
 
 interface SideBarProps {
@@ -44,10 +43,10 @@ export function SideBar({ className }: SideBarProps) {
             <div className={classNames(cls.sidebarIcons, { [cls.openSideBarIcon]: !collapsed })}>
                 <Button
                     data-testid="sidebar-toggle"
-                    theme={ButtonTheme.BACKGROUND_INVERTED}
+                    theme={ButtonTheme.CLEAR}
                     onClick={onToggle}
                     size={ButtonSize.M}
-                    hasIcon
+                    // hasIcon
                 >
                     <SideBarIcon fill="white" className={cls.icon} width={48} height={48} />
                 </Button>
@@ -77,9 +76,7 @@ export function SideBar({ className }: SideBarProps) {
                 <div className={cls.language}>
                     {t('Язык')}
                 </div>
-
             </div>
-
         </div>
 
     );

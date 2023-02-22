@@ -32,6 +32,10 @@
 .openSideBarIcon {
     display: flex;
     justify-content: flex-end;
+
+    .icon {
+        transform: rotate(180deg);
+    }
 }
 
 .icon {
@@ -80,7 +84,6 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-top: 0;
-    transition: 0.4s all;
 
     .lang {
         margin-left: 0;
@@ -88,7 +91,6 @@
 
     .link {
         opacity: 0;
-        transition: 0.4s all;
         width: 0;
     }
 }
