@@ -34,6 +34,9 @@ export default {
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
     resolver: undefined,
+    globals: {
+        __IS_DEV: true,
+    },
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -76,7 +79,6 @@ export default {
     // globalTeardown: undefined,
 
     // A set of global variables that need to be available in all test environments
-    // globals: {},
 
     // The maximum amount of workers used to run your renderWithRouter. Can be specified as % or a number.
     // E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number.
