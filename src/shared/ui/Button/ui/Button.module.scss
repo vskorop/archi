@@ -76,3 +76,8 @@
 .button.hasIcon {
     display: contents;
 }
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
