@@ -3,14 +3,20 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
-import { Modal } from 'shared/ui/Modal';
 
-import { useTheme } from './providers/ThemeProvider';
 import './styles/index.scss';
+import { useDispatch } from 'react-redux';
+import { userActions } from 'entities/User/model/slice/userSlice';
 
 function App() {
-    const { theme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(userActions.initAuthData());
+    }, [dispatch]);
+
     const onToggle = () => {
         setIsOpen(!isOpen);
     };

@@ -3,6 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { LoginForm } from './LoginForm';
 
 export default {
@@ -28,10 +29,20 @@ export const Primary = Template.bind({});
 Primary.args = {
     value: 'value',
 };
-
+Primary.decorators = [StoreDecorator({
+    login: {
+        username: 'admin', password: '123', error: 'error_message', isLoading: false,
+    },
+})];
 export const Dark = Template.bind({});
 Dark.args = {
     value: 'value',
 
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        login: {
+            username: 'admin', password: '123', error: 'error_message', isLoading: false,
+        },
+    })];
