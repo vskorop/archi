@@ -20,6 +20,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     square?: boolean;
     size?: ButtonSize;
     hasIcon?: boolean
+    disabled?: boolean;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -30,6 +31,7 @@ export const Button: FC<ButtonProps> = (props) => {
         size = ButtonSize.M,
         square,
         hasIcon,
+        disabled,
         ...other
     } = props;
 
@@ -38,6 +40,7 @@ export const Button: FC<ButtonProps> = (props) => {
         [cls.square]: square,
         [cls[size]]: true,
         [cls.hasIcon]: hasIcon,
+        [cls.disabled]: disabled,
     };
     return (
         <button
