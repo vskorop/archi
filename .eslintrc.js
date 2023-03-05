@@ -40,7 +40,7 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['fill', 'data-testid', 'to'],
+            ignoreAttribute: ['fill', 'data-testid', 'to', 'name'],
         }],
         'max-len': ['error', {
             code: 120,

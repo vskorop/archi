@@ -1,6 +1,6 @@
 import React, {
     InputHTMLAttributes,
-    memo,
+    memo, useCallback,
     useEffect,
     useRef,
     useState,
@@ -22,11 +22,16 @@ export interface InputProps extends HTMLInputProps {
 
 export const Input = memo((props: InputProps) => {
     const {
-        className, value, onChange, placeholder, autofocus, type = 'text', ...otherProps
+        className,
+        value = '',
+        onChange,
+        placeholder,
+        autofocus,
+        type = 'text',
+        ...otherProps
     } = props;
-    const [isFocused, setIsFocused] = useState(false);
+    const [_, setIsFocused] = useState(false);
     const ref = useRef<HTMLInputElement>(null);
-
     useEffect(() => {
         if (autofocus) {
             setIsFocused(true);
