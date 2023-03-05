@@ -1,6 +1,5 @@
 import { LoginModal } from '../AuthByUserName/ui/LoginModal/LoginModal';
 import { LoginSchema } from './model/types/loginSchema';
+import { loginReducer } from './model/slice/loginSlice';
 
-export {
-    LoginModal, LoginSchema,
-};
+export { LoginModal, LoginSchema, loginReducer };

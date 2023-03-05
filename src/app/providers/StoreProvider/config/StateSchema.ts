@@ -9,8 +9,6 @@ import { CombinedState } from 'redux';
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
-
-    // Асинхронные редюсеры
     login?: LoginSchema;
 }
 
