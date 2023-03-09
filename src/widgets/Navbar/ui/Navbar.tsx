@@ -7,7 +7,7 @@ import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button';
 import EnterIcon from 'shared/assets/icons/input-icon.svg';
 
 import { LoginModal } from 'features/AuthByUserName';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import { getUserAuthData } from 'entities/User';
 import { userActions } from 'entities/User/model/slice/userSlice';
 import cls from './Navbar.module.scss';
@@ -18,8 +18,8 @@ interface NavbarProps {
 }
 export const Navbar: FC<NavbarProps> = (props) => {
     const { t } = useTranslation();
-
     const [isAuthModal, setIsAuthModal] = useState(false);
+
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
 

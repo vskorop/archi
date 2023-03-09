@@ -32,6 +32,7 @@ export const Input = memo((props: InputProps) => {
     } = props;
     const [_, setIsFocused] = useState(false);
     const ref = useRef<HTMLInputElement>(null);
+
     useEffect(() => {
         if (autofocus) {
             setIsFocused(true);
