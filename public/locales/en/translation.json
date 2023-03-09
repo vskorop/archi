@@ -1,7 +1,7 @@
 {
   "Войти": "Login",
   "Главная": "Main",
-  "О сайте": "About",
+  "О cайте": "About",
   "Обновить страницу": "Reload page",
   "Произошла ошибка": "Error",
   "Страница 404": "error",
@@ -10,5 +10,6 @@
   "Логин": "Login",
   "Пароль": "Password",
   "Форма Авторизации": "Authorisation form",
-  "Неверный логин или пароль": "wrong login or password"
+  "Неверный логин или пароль": "wrong login or password",
+  "Профиль": "Profile"
 }

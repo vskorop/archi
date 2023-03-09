@@ -1,0 +1,18 @@
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 16px;
+    fill: var(--primary-color);
+}
+
+.link {
+    margin-left: 10px;
+    opacity: 1;
+}
+
+.item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
