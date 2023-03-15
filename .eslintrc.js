@@ -49,9 +49,11 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV: true,
+        __API: true,
     },
     overrides: [{
         files: ['**/src/**/*.{test,stories}.{ts,tsx}', '**/src/**/*.svg', 'eslintrc.js'],

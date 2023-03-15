@@ -11,5 +11,8 @@
   "Пароль": "Password",
   "Форма Авторизации": "Authorisation form",
   "Неверный логин или пароль": "wrong login or password",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Имя": "Name",
+  "Город": "City",
+  "Редактировать": "Edit"
 }

@@ -1,0 +1,15 @@
+.profileCard {
+    margin: 20px;
+    padding: 50px;
+    width: 50%;
+    height: 40%;
+    border: 2px solid var(--inverted-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.input {
+    margin: 10px 0;
+}

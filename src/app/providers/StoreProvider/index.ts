@@ -4,7 +4,7 @@ export {
 } from './config/store';
 
 export {
-    StateSchema,
+    StateSchema, ThunkConfig,
 } from './config/StateSchema';
 
 export {

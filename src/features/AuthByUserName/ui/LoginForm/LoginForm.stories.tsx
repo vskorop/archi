@@ -26,19 +26,14 @@ const Template: ComponentStory<typeof LoginForm> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-    value: 'value',
-};
+Primary.args = {};
 Primary.decorators = [StoreDecorator({
     login: {
         username: 'admin', password: '123', error: 'error_message', isLoading: false,
     },
 })];
 export const Dark = Template.bind({});
-Dark.args = {
-    value: 'value',
-
-};
+Dark.args = {};
 Dark.decorators = [
     ThemeDecorator(Theme.DARK),
     StoreDecorator({

@@ -36,6 +36,7 @@ export default {
     resolver: undefined,
     globals: {
         __IS_DEV: true,
+        __API: '',
     },
 
     // Indicates whether the coverage information should be collected while executing the test

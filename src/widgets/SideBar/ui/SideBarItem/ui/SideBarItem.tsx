@@ -9,7 +9,7 @@ interface SideBarItemProps {
     className?: string
     collapsed?: boolean;
 
-    item?: SideBarItemType
+    item: SideBarItemType
 }
 export const SideBarItem = memo((props: SideBarItemProps) => {
     const {

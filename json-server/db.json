@@ -31,5 +31,16 @@
 
     }
   ],
-  "profile": { "name": "typeCode" }
+
+  "profile":
+    {
+  "id": "1",
+  "username": "admin",
+  "password": "123",
+  "country": "Russia",
+  "city": "Moscow",
+  "age": 25,
+  "currency": "RUB",
+  "avatar": "https://i.redd.it/h5yet8gu4w8y.jpg"
+  }
 }
