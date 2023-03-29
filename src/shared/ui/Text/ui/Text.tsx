@@ -27,7 +27,6 @@ export const Text = memo((props: TextProps) => {
     const mods: Mods = {
         [cls[theme]]: true,
         [cls[align]]: true,
-        [cls[theme]]: true,
     };
     return (
         <div className={classNames(cls.text, mods, [className])}>

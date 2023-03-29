@@ -5,9 +5,10 @@ import AboutIcon from 'shared/assets/icons/instruction-manuals-book-icon.svg';
 import ProfileIcon from 'shared/assets/icons/person-profile-image-icon.svg';
 
 export interface SideBarItemType {
-path: string;
-text: string;
-Icon: React.VFC<React.SVGProps<SVGSVGElement>>;
+    path: string;
+    text: string;
+    Icon: React.VFC<React.SVGProps<SVGSVGElement>>;
+    authOnly?: boolean;
 }
 
 export const SideBarItemsList: SideBarItemType[] = [
@@ -18,12 +19,13 @@ export const SideBarItemsList: SideBarItemType[] = [
     },
     {
         path: RoutePath.about,
-        text: 'О cайте',
+        text: 'О сайте',
         Icon: AboutIcon,
     },
     {
         path: RoutePath.profile,
         text: 'Профиль',
         Icon: ProfileIcon,
+        authOnly: true,
     },
 ];

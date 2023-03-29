@@ -1,7 +1,7 @@
 {
   "Войти": "Login",
   "Главная": "Main",
-  "О cайте": "About",
+  "О сайте": "About",
   "Обновить страницу": "Reload page",
   "Произошла ошибка": "Error",
   "Страница 404": "error",
@@ -13,8 +13,14 @@
   "Неверный логин или пароль": "wrong login or password",
   "Профиль": "Profile",
   "Имя": "Name",
+  "Фамилия":"Last name",
+  "Возраст":"Age",
+  "Валюта":"Currency",
   "Город": "City",
+  "Страна": "Country",
+  "Фото": "Photo",
   "Редактировать": "Edit",
+  "Отменить":  "Cancel",
   "Ошибка при загрузке профиля": "Profile loading error",
   "Поробуйте обновить страницу": "Try to refresh this page"
 }

@@ -41,6 +41,16 @@
     background-color: var(--four-color);
 }
 
+.success {
+    color: var(--text-color);
+    background-color: var(--success-color);
+}
+
+.cancel {
+    color: var(--text-color);
+    background-color: var(--four-color);
+}
+
 .square {
     padding: 0;
     width: fit-content;
