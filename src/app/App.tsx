@@ -17,9 +17,6 @@ function App() {
         dispatch(userActions.initAuthData());
     }, [dispatch]);
 
-    const onToggle = () => {
-        setIsOpen(!isOpen);
-    };
     return (
         <div className={classNames('app', {}, [])}>
             <Suspense fallback="">

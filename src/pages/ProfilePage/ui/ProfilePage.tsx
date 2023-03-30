@@ -3,17 +3,22 @@ import React, { FC, useCallback, useEffect } from 'react';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     fetchProfileData,
-    getProfileForm,
     getProfileError,
+    getProfileForm,
     getProfileIsLoading,
+    getProfileReadOnly,
+    getProfileValidateErrors,
+    profileActions,
     ProfileCard,
-    profileReducer, profileActions, getProfileReadOnly,
+    profileReducer,
 } from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Text } from 'shared/ui/Text';
+import { TextTheme } from 'shared/ui/Text/ui/Text';
 import { ProfilePageHeader } from './ProgilePageHeader/ProfilePageHeader';
 
 import cls from './ProfilePage.module.scss';
@@ -28,6 +33,7 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
     const { className } = props;
     const dispatch = useAppDispatch();
 
+    const validateErrors = useSelector(getProfileValidateErrors);
     const formData = useSelector(getProfileForm);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadOnly);
@@ -65,10 +71,14 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
         dispatch(profileActions.updateProfile({ country: value as Country || '' }));
     }, [dispatch]);
 
+    console.log(validateErrors);
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.profilePage, {}, [className])}>
                 <ProfilePageHeader />
+                {validateErrors && validateErrors.map((item) => (
+                    <Text theme={TextTheme.ERROR} text={item} key={item} />
+                ))}
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}

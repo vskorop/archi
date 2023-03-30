@@ -1,15 +1,16 @@
 .profileCard {
     padding: 20px;
-    border: 2px solid var(--inverted-bg-color);
+    border: 1px solid var(--inverted-bg-color);
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     border-radius: 10px;
-    align-items: flex-start;
+    width: 600px;
+    height: 350px;
+    color: var(--text-color);
 }
 
 .input {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .loading,
@@ -28,7 +29,5 @@
 
 .editing {
     border-radius: 10px;
-    transform: scale(0.99);
-    transition: all 1s;
-    box-shadow: 2px 2px 2px var(--text-color);
+    box-shadow: 1px 1px 1px var(--text-color);
 }
