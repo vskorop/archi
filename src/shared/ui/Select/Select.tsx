@@ -31,16 +31,16 @@ export const Select = memo((props: SelectProps) => {
     };
 
     const optionsList = useMemo(() => (
-        options?.map((item) => (
-            <option key={value} className={cls.option}>{item.content}</option>
-        ))), [options, value]);
+        options?.map((item, i) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <option key={i} className={cls.option}>{item.content}</option>
+        ))), [options]);
 
     const mods: Mods = {};
 
     return (
         <div className={classNames(cls.wrapper, mods, [className])}>
             {label && <span className={cls.label}>{label}</span>}
-
             <select
                 disabled={readonly}
                 className={cls.select}

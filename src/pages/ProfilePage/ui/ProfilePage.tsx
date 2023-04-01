@@ -40,7 +40,9 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
     const isLoading = useSelector(getProfileIsLoading);
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {
@@ -71,7 +73,6 @@ const ProfilePage: FC<ProfilePageProps> = (props) => {
         dispatch(profileActions.updateProfile({ country: value as Country || '' }));
     }, [dispatch]);
 
-    console.log(validateErrors);
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.profilePage, {}, [className])}>

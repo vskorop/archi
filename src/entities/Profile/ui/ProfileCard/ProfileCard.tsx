@@ -48,20 +48,24 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
     if (isLoading) {
         return (
-            <div className={classNames(cls.loading, {}, [className, cls.loading])}>
-                <Loader black />
+            <div className={classNames(cls.profileCard, {}, [className])}>
+                <div className={classNames(cls.loading, {}, [className, cls.loading])}>
+                    <Loader black />
+                </div>
             </div>
         );
     }
     if (error) {
         return (
-            <div className={classNames(cls.error, {}, [className, cls.error])}>
-                <Text
-                    align={TextAlign.CENTER}
-                    title={t('Ошибка при загрузке профиля')}
-                    text={t('Поробуйте обновить страницу')}
-                    theme={TextTheme.ERROR}
-                />
+            <div className={classNames(cls.profileCard, {}, [className])}>
+                <div className={classNames(cls.error, {}, [className, cls.error])}>
+                    <Text
+                        align={TextAlign.CENTER}
+                        title={t('Ошибка при загрузке профиля')}
+                        text={t('Поробуйте обновить страницу')}
+                        theme={TextTheme.ERROR}
+                    />
+                </div>
             </div>
         );
     }

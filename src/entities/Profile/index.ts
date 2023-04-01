@@ -1,5 +1,5 @@
-import { fetchProfileData } from './model/services/fetchProfileData';
-import { updateProfileData } from './model/services/updateProfileData';
+import { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
+import { updateProfileData } from './model/services/updateProfileData/updateProfileData';
 import { profileActions, profileReducer } from './model/slice/profileSlice';
 import { Profile, ProfileSchema } from './model/types/profile';
 import { ProfileCard } from './ui/ProfileCard/ProfileCard';
