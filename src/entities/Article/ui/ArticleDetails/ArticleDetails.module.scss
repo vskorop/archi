@@ -1,0 +1,46 @@
+.articleDetails {
+    background-color: var(--primary-color);
+    height: calc(100vh - var(--navbar-heigth) - 40px);
+    min-width: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid var(--inverted-bg-color);
+}
+
+.avatar {
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 25px;
+}
+
+.description {
+    margin-top: 5px;
+}
+.iconSkeleton {
+    margin-top: 10px;
+}
+
+.skeleton {
+    margin-top: 15px;
+}
+
+.articleInfo {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.avatarWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.block {
+    margin-top: 16px;
+}
