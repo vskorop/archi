@@ -4,14 +4,13 @@ import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { SideBar } from 'widgets/SideBar';
 
-import './styles/index.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from 'entities/User/model/slice/userSlice';
 import { getUserMounted } from 'entities/User';
 
-function App() {
-    const [isOpen, setIsOpen] = useState(false);
+import './styles/index.scss';
 
+function App() {
     const dispatch = useDispatch();
     const isMounted = useSelector(getUserMounted);
     useEffect(() => {
